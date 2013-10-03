@@ -13,7 +13,6 @@
   "author": "Justas Brazauskas",
   "license": "BSD",
   "dependencies": {
-    "pushover": "~1.3.3",
     "unzip": "~0.1.9",
     "git-server": "~0.1.0"
   }
