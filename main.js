@@ -7,8 +7,8 @@ var repos = pushover(path.normalize(conf.dir+'/repos'));
 repos.on('push', function (push) {
 	console.log('push ' + push.repo + '/' + push.commit + ' (' + push.branch + ')');
 	push.accept();
-	helper.clone_to_dir(push, function() {
-		console.log('clone ' + push.repo + '/' + push.commit + ' (' + push.branch + ')');
+	helper.clone_to_dir(push, function(file, push) {
+		console.log('clone ' + file + '(' + push.branch + ')');
 	});
 });
 
