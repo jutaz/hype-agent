@@ -4,7 +4,7 @@ var helper = require('./lib/helper');
 var unzip = require('unzip');
 var fs = require('fs');
 var conf = require("./conf.json");
-var db = require('./lib/db')(conf.db);
+var db = require('./lib/db');
 
 var newUser = {
 	username:'demo',
