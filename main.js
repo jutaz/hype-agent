@@ -15,10 +15,10 @@ var newRepo = {
 	anonRead:false,
 	users: [ { user:newUser, permissions:['R','W'] } ],
 	onSuccessful: {
-		fetch: function( repo, method ){
+		fetch: function(repo, method, push){
 			console.log('Successful fetch/pull/clone on repo:',repo.name);
 		},
-		push: function( repo, method ){
+		push: function(repo, method push){
 			console.log('PUSHed:', repo, method);
 			helper.clone_to_dir(repo, function(file, push) {
 				fs.createReadStream(file).pipe(unzip.Extract({ path: conf.dir }));
