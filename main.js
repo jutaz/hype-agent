@@ -13,11 +13,11 @@ var newRepo = {
 	name:'gitter',
 	anonRead:false,
 	users: [ { user:newUser, permissions:['R','W'] } ],
-	onSuccessful : {
-		fetch : function( repo, method ){
+	onSuccessful: {
+		fetch: function( repo, method ){
 			console.log('Successful fetch/pull/clone on repo:',repo.name);
 		},
-		push  : function( repo, method ){
+		push: function( repo, method ){
 			console.log('PUSHed:', repo, method);
 			helper.clone_to_dir(repo, function(file, push) {
 				fs.createReadStream(file).pipe(unzip.Extract({ path: conf.dir }));
