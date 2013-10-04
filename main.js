@@ -20,14 +20,17 @@ var newRepo = {
 			console.log('Successful fetch/pull/clone on repo:',repo.name);
 		},
 		push: function(repo, method, push) {
+			console.log('PUSHed:', repo, method);
 			em(push.cwd).on('post-update', function(update) {
 				var timeStart = new Date().getTime();
-				console.log(update, push);
-				helper.clone_to_dir(push, function(file, push) {
+				update.name = push.name;
+				update.commit = push.commit;
+				update.branch = push.branch;
+				update.cwd = push.cwd;
+				helper.clone_to_dir(update, function(file, push) {
 					console.log('clone ' + file + '(' + push.branch + ')', "time:", (new Date().getTime()-timeStart));
 				});
 			});
-			console.log('PUSHed:', repo, method);
 		}
 	}
 }
