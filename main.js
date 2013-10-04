@@ -20,7 +20,7 @@ var newRepo = {
 		},
 		push: function(repo, method push){
 			console.log('PUSHed:', repo, method);
-			helper.clone_to_dir(repo, function(file, push) {
+			helper.clone_to_dir(push, function(file, push) {
 				fs.createReadStream(file).pipe(unzip.Extract({ path: conf.dir }));
 				console.log('clone ' + file + '(' + push.branch + ')');
 			});
