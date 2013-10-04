@@ -1,3 +1,10 @@
 {
-	"dir": "/apps"
+	"dir": "/apps",
+	"db": {
+		"host": "",
+		"port": 27017,
+		"username": "",
+		"password": "",
+		"database":  ""
+	}
 }
