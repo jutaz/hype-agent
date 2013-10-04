@@ -14,7 +14,7 @@
   "license": "BSD",
   "dependencies": {
     "unzip": "~0.1.9",
-    "git-server": "~0.1.0",
+    "git-server": "https://github.com/jutaz/NodeJS-Git-Server/tarball/master",
     "mongoskin": "~0.6.0"
   }
 }
