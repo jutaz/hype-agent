@@ -1,7 +1,6 @@
 var GitServer = require('git-server');
 var path = require('path');
 var helper = require('./lib/helper');
-var unzip = require('unzip');
 var fs = require('fs');
 var conf = require("./conf.json");
 var db = require('./lib/db');
