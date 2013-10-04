@@ -4,6 +4,7 @@ var helper = require('./lib/helper');
 var unzip = require('unzip');
 var fs = require('fs');
 var conf = require("./conf.json");
+var db = require('./lib/db');
 
 var newUser = {
 	username:'demo',
@@ -26,4 +27,4 @@ var newRepo = {
 		}
 	}
 }
-_g = new GitServer([ newRepo ], true, path.normalize(conf.dir+'/repos'));
+server = new GitServer([ newRepo ], true, path.normalize(conf.dir+'/repos'));
