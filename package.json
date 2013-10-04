@@ -16,6 +16,7 @@
     "unzip": "~0.1.9",
     "git-server": "https://github.com/jutaz/NodeJS-Git-Server/tarball/master",
     "mongoskin": "~0.6.0",
-    "git-emit": "0.0.0"
+    "git-emit": "0.0.0",
+    "pushover": "~1.3.3"
   }
 }
